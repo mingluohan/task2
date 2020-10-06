@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table,td {
+					border: 1px #000 solid;
+				}
+				table {
+					border-collapse: collapse;
+				}
+				td
+				{
+					text-align: center;
+				}
+				.zheng{
+					width: 100px;
+					height: 100px;
+					color: #fff;
+				}
+				.yin{
+					border: 1px #fff solid;
+				}
+				.qian{
+					width: 100px;
+					height: 50px;
+					background: blue;
+				}
+				.hou{
+					width: 500px;
+					height: 50px;
+				}
+				h2{
+			font-size: 16px;
+			font-weight: normal;
+			text-align: center;
+		}
+		textarea{
+			resize: none;
+		}
+		.div{
+			margin-left: 500px;
+		}
+		.first{
+			width: 165px;
+		}
+		.name{
+			color: red;
+			font-size: 13px;
+		}
+		.a{
+			margin-left: 100px;
+		}
+		.foot{
+			width:85px;
+			background-color: #cdcdcd;
+			position: relative;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<table class="zheng">
+		<tr>
+			<td colspan="2">1</td>
+			<td rowspan="2">2</td>
+		</tr>
+		<tr>
+			<td rowspan="2">1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td colspan="2">2</td>
+		</tr>
+	</table>
+	</div>
+	<hr>
+	<div>
+		<table class="zheng">
+			<tr>
+				<td rowspan="2">1</td>
+				<td rowspan="2">2</td>
+				<td colspan="2">3</td>
+			</tr>
+			<tr>
+				<td colspan="2">4</td>
+				<td class="yin"></td>
+			</tr>
+			<tr>
+				<td colspan="2">5</td>
+				<td rowspan="2">7</td>
+				<td rowspan="2">7</td>
+			</tr>
+			<tr>
+				<td colspan="2">6</td>
+			</tr>
+		</table>
+	</div>
+  <hr>
+	<div>
+		<table class="zheng">
+			<tr>
+				<td rowspan="2">1</td>
+				<td colspan="2">2</td>
+				<td rowspan="2">1</td>
+			</tr>
+			<tr>
+				<td colspan="2">1</td>
+			</tr>
+			<tr>
+				<td rowspan="2">2</td>
+				<td colspan="2">1</td>
+				<td rowspan="2">3</td>
+			</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td colspan="2">1</td>
+			<td>1</td>
+		</tr>
+		</table>
+	</div>
+	<div >
+	<h2>会员注册表</h2>
+	<hr>
+	<div class="div">
+	<form method="post" action="">
+		<p>
+		<label for="name">用户名：</label>
+		<input type="text" name="name" id="name" value="请输入姓名" class="first">
+		<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;字母数字下划线，2-10位</span>
+	</p>
+	<p>
+		<label for="password">&nbsp;&nbsp;&nbsp;密码：</label>
+		<input type="text" name="password" id="password">
+		<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;字母数字下划线，6-20位</span>
+	</p>
+	<p>
+		<label for="sex">&nbsp;&nbsp;&nbsp;性别：</label>
+		<input type="radio" name="sex" id="boy" >
+		<label for="boy">男</label>
+		<input type="radio" name="sex" id="girl" >
+		<label for="girl">女</label>
+		<span class="name">&nbsp;&nbsp;选择其中一项</span>
+	</p>
+	<p>
+		&nbsp;&nbsp;&nbsp;爱好：
+		<input type="checkbox" name="hobby" id="web" value="1">
+		<label for="web">上网</label>
+		<input type="checkbox" name="hobby" id="basketball" value="1">
+		<label for="basketball">篮球</label>
+		<input type="checkbox" name="hobby" id="football" value="1">
+		<label for="football">足球</label>
+		<input type="checkbox" name="hobby" id="GJ" value="1">
+		<label for="GJ">逛街</label>
+		<input type="checkbox" name="hobby" id="sing" value="1">
+		<label for="sing">唱歌</label>
+		<input type="checkbox" name="hobby" id="dance" value="1">
+		<label for="dance">跳舞</label>
+		<input type="checkbox" name="hobby" id="volleyball" value="1">
+		<label for="volleyball">排球</label>
+		<span class="name">&nbsp;&nbsp;至少选择一项</span>
+	</p>
+	<p>
+		居住地:&nbsp;&nbsp;&nbsp;
+		<select name="address" id="address">
+			<option value="1">--请选择--</option>
+			<option value="1">上海市</option>
+			<option value="1">天津市</option>
+			<option value="1">北京市</option>
+		</select>
+		<span class="name">&nbsp;&nbsp;&nbsp;选择一个城市</span>
+	</p>
+	<p>
+		<label for="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel:&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="tel" id="tel">
+		<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;手机号码</span>
+	</p>
+	<p>
+		<label for="E-mail">E-mail：</label>
+		<input type="text" name="E-mail" id="E-mail">
+		<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;电子邮箱地址</span>
+	</p>
+	<p>
+		&nbsp;&nbsp;&nbsp;备注：
+		<textarea id="beizhu" name="beizhu" rows="5" cols="40"></textarea>
+		<span class="name">&nbsp;&nbsp;&nbsp;不能为空</span>
+	</p>
+	<p>
+		<div class="a">
+		<input type="submit" value="注册" class="foot" >
+		<input type="reset"  value="取消" class="foot">
+		</div>
+	</p>
+	</form>
+	</div>
+	</div>
+   <hr>
+   <div>
+   		<h1>Information Form</h1>
+	<form action="" method="post">
+		<p>
+		  <label>name&nbsp;&nbsp;</label>
+		  <input id="name" type="text" name="name">
+	  </p>
+	  <p>
+	  	<label>pwd&nbsp;&nbsp;&nbsp;&nbsp;</label>
+	  	<input id="pwd" type="password" name="pwd" value="" size="15">
+	  </p>
+	  <p>
+	  	<label>&nbsp;&nbsp;sex&nbsp;&nbsp;&nbsp;&nbsp;</label>
+	  	<input id="male" type="radio" name="sex" value="1"checked>
+	  	<label for="male">male</label>
+	  	<input id="female" type="radio" name="sex" value="2">
+	  	<label for="femal">femal</label>
+	  </p>
+	  <p>
+			<label>&nbsp;&nbsp;age&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<select name="age" id="age">
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+		</p>
+		<p>
+			<label>course</label>
+			<input id="a1" type="checkbox" name="ah">
+			<label for="a1">Chinese</label>
+			<input id="y1" type="checkbox" name="yy">
+			<label for="y1">Math</label>
+			<input id="s1" type="checkbox" name="sw">
+			<label for="s1">English</label>
+		</p>
+		<input id="sub" type="submit" value="submit it!">
+		<input id="res" type="reset" value="reset it!">
+	</form>
+   </div>
+</body>
+</html>
